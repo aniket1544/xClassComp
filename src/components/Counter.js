@@ -7,7 +7,21 @@ class Counter extends Component {
         this.handleIncrement = this.handleIncrement.bind(this);
     }
 
+    handleIncrement() {
+        this.setState((prev) => {
+            return {
+                counter: prev.counter + 1
+            }
+        });
+    }
 
+    handleDecrement = () => {
+        this.setState(prev => {
+            return {
+                counter: prev.counter - 1
+            }
+        })
+    }
 
     render() {
         return (
